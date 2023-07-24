@@ -1,0 +1,270 @@
+.previousPrize {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(120, 120, 120);
+  background-size: cover;
+}
+
+.section {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.wheelBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-weight: 900;
+  border-radius: 50%;
+  border: 5px solid 120, 120, 120;
+  overflow: hidden;
+}
+
+span {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+.span1 {
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  background-color: rgb(214, 73, 73);
+  top: 75px;
+  left: 0;
+}
+
+.span2 {
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  background-color: rgb(214, 73, 73);
+  top: 75px;
+  right: 0;
+}
+
+.span3 {
+  clip-path: polygon(50% 0, 8% 100%, 92% 100%);
+  background-color: rgb(214, 73, 73);
+  bottom: 0;
+  left: 75px;
+}
+
+.span4 {
+  clip-path: polygon(50% 100%, 92% 0, 8% 0);
+  background-color: rgb(214, 73, 73);
+  top: 0;
+  left: 75px;
+}
+
+.span5 {
+  clip-path: polygon(50% 0, 8% 100%, 92% 100%);
+  background-color: rgb(64, 62, 62);
+  top: 128px;
+  rotate: -45deg;
+  left: 128px;
+}
+
+.span6 {
+  clip-path: polygon(50% 0, 8% 100%, 92% 100%);
+  background-color: rgb(64, 62, 62);
+  top: 22px;
+  rotate: 135deg;
+  left: 22px;
+}
+
+.span7 {
+  clip-path: polygon(50% 0, 8% 100%, 92% 100%);
+  background-color: rgb(64, 62, 62);
+  top: 22px;
+  rotate: -135deg;
+  left: 128px;
+}
+
+.span8 {
+  clip-path: polygon(50% 0, 8% 100%, 92% 100%);
+  background-color: rgb(64, 62, 62);
+  top: 128px;
+  rotate: 45deg;
+  left: 22px;
+}
+
+span b {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.span8 b,
+.span7 b,
+.span6 b,
+.span5 b {
+  top: 75%;
+  left: 30%;
+  transform: rotate(180deg);
+}
+
+.span1 b {
+  position: absolute;
+  left: 25px;
+  top: 40%;
+  transform: translateX(-50%) rotate(270deg);
+}
+
+.span3 b {
+  position: absolute;
+  right: 25px;
+  top: 75%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.span4 b {
+  position: absolute;
+  right: 55px;
+  top: 10%;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.span2 b {
+  position: absolute;
+  top: 60px;
+  left: 90%;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.spinBtn {
+  position: absolute;
+  width: 200px;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  font-size: 24px;
+  background-color: rgb(179, 179, 179);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.spinBtn:hover {
+  background-color: rgb(214, 73, 73);
+}
+
+.pointer {
+  position: absolute;
+  top: 15px;
+  left: 59%;
+  transform: translateX(-50%) rotate(180deg);
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+
+.options {
+  width: 230px;
+  height: 420px;
+  background-color: rgb(64, 62, 62);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.options p {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+.field {
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.field input {
+  background-color: rgb(179, 179, 179);
+  border-radius: 14px;
+  height: 24px;
+  width: 100px;
+}
+
+input {
+  border: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+input:focus {
+  outline-style: none;
+  box-shadow: none;
+}
+
+.clear-btn {
+  content: "X";
+  color: #f00;
+  border: none;
+  background-color: rgb(64, 62, 62);
+}
+
+.optionsBtn {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: rgb(179, 179, 179);
+  width: 220px;
+  height: 24px;
+  text-align: center;
+  padding-bottom: 22px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.optionsBtn:hover {
+  background-color: rgb(179, 179, 179);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid black;
+  position: relative;
+  z-index: 1;
+}
+
+.innerTriangle {
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 26px solid rgb(214, 73, 73);
+  position: absolute;
+  top: 8px;
+  left: -13px;
+}
